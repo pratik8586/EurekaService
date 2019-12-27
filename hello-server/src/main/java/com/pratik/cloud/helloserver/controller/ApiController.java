@@ -10,10 +10,10 @@ import org.springframework.web.client.RestTemplate;
  * @author pgaikwad
  */
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api/v1")
 public class ApiController {
 
-    @GetMapping("getResult")
+    @GetMapping("/getResult")
     public String getResult() {
         return "sab theek hai ..!!";
     }

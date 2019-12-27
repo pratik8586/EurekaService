@@ -13,21 +13,21 @@ import java.net.URI;
  * @author pgaikwad
  */
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api/v2")
 public class ApiController {
     @Autowired
     private RestTemplate restTemplate;
 
 
-    @GetMapping("getResult")
+    @GetMapping("/getResult")
     public String getResult()
     {
         return "client b thik hai";
     }
-    @GetMapping("getFromServer")
-    public String getFromServer()
-    {
-        String url="http://hello-server/getResult";
-        return restTemplate.getForObject(url,String.class);
-    }
+//    @GetMapping("/getFromServer")
+//    public String getFromServer()
+//    {
+//        String url="http://hello-server/getResult";
+//        return restTemplate.getForObject(url,String.class);
+//    }
 }
